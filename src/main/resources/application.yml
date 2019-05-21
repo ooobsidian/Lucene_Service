@@ -1,0 +1,23 @@
+
+server:
+  servlet:
+    context-path: /api
+  port: 9999
+
+spring:
+  #  jackson:
+  #    time-zone: GMT+8
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/postgres?useSSL=false
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.model.model.entity
